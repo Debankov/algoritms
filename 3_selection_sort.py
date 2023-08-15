@@ -7,9 +7,7 @@ def selectionSort(array):
             if array[j] < array[indexMin]:
                 indexMin = j
             
-        tmp = array[i] # временная переменная хранящая в себе элемент из списка
-        array[i] = array[indexMin] 
-        array[indexMin] = tmp # меняем переменные местами
+        array[i], array[indexMin] = array[indexMin], array[i] # меняем элементы местами
     return array
 
 if __name__ == '__main__':
